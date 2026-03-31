@@ -1,0 +1,304 @@
+@use "../../../s3d2/styles/globals/s3d2_fonts.scss" as s3d2_fonts;
+
+.reservation-popup {
+   padding: 0;
+   background-color: transparent;
+   border-radius: 0;
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    width: 100%;
+    max-width: 1290px;
+    gap:2px;
+  }
+  
+ 
+
+}
+
+.reservation-header {
+  
+
+@media screen and (min-width: 1024px) {
+    flex: 1;
+  }
+  
+}
+.reservation-progress{
+    background-color: var(--s3d2-color-gray-900);
+    padding: var(--space-5);
+    border-radius: var(--space-3) var(--space-3) 0 0;
+    margin-bottom: 0;;
+    span[data-step-text] {
+      @include s3d2_fonts.fonts-3d-h3-semibold;
+      color: var(--s3d2-color-gray-200);
+      margin-right: var(--space-2);
+    }
+    span[data-step-descr] {
+      @include s3d2_fonts.fonts-3d-body;
+      color: var(--s3d2-color-gray-200);
+      
+    }
+  }
+  .progress-line {
+    width: 96px;
+    height: 6px;
+    background-color: var(--s3d2-color-gray-200);
+    border-radius: 80px;
+    margin-bottom: var(--space-3);
+    .progress-fill{
+      background-color: var(--color-surface-success)
+    }
+  }
+.reservation-flat-info {
+  background-color: var(--s3d2-color-gray-200);
+  padding: var(--space-5);
+  border-radius: 0 0 var(--space-3) var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .s3d-flat-dashboard__status-label {
+      position: static;
+    }
+  }
+  &__middle {
+    display: flex;
+    align-items: center;
+    
+    .flat-meta{
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-5);
+      padding: 0 var(--space-2);
+    }
+    
+    .flat-img{
+      width: 100%;
+      
+      
+      img{
+        width: 100%;
+        max-height: 400px;
+        object-fit: contain;
+      }
+    }
+  }
+  .meta-column{
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 0;
+    }
+    .meta-row{
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-3);
+      width: 100%;
+      span {
+        white-space: nowrap;
+      }
+     
+    }
+    .meta-line{
+      width: 100%;
+      height: 1px;
+      background-color: var(--s3d2-color-surface-gray-900-transparent-10);
+    }
+    &__bottom {
+      display: flex;
+      flex-direction:  column;
+      gap: var(--space-2);
+    }
+}
+
+.reservation-body{
+   background-color: var(--s3d2-color-gray-200);
+   border-radius:var(--space-3) ;
+   padding: var(--space-3);
+   position: relative;
+
+  @media screen and (min-width: 1024px) {
+    flex: 2.5;
+    padding: var(--space-10);
+  }
+}
+
+.reservation-step {
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    @media screen and (min-width: 1024px) {
+      flex-direction: row;
+      gap: var(--space-10);
+    }
+  }
+  &__form-wrap {
+    flex: 1;
+    padding: var(--space-5);
+    border: 1px solid var(--s3d2-color-gray-900);
+    border-radius: var(--space-3);
+    @media screen and (min-width: 1024px) {
+      padding: var(--space-8);
+    }
+    .reservation-text{
+      margin-bottom: var(--space-10);
+    }
+    .form-group{
+      margin-bottom: var(--space-5);
+      &:last-child{
+        margin-bottom:  var(--space-10);
+      }
+    }
+    .btn-primary{
+      margin-top:  var(--space-10);
+    }
+    .reservation-title{
+      margin-bottom: var(--space-2);
+    }
+  }
+}
+.reservation-step__sidebar{
+  flex: 1;
+}
+.reservation-step__sidebar-tips{
+  
+  padding: var(--space-8) var(--space-5);
+  border-radius: var(--space-3);
+  background-color: var(--color-surface-success-available-transparent-20);
+
+ display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+&--step-2{
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+    .reservation-text {
+      max-width: 50%;
+    }
+  }
+}
+  &--wrap {
+    display: flex;
+    align-items: center;
+    gap: var(--space-5);
+    svg{
+      width: var(--space-6);
+      height: var(--space-6);
+      flex-shrink: 0;
+    }
+  }
+  .tips-list{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    li {
+      display: flex;
+      
+      gap: var(--space-2);
+      svg{
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+.separate-line{
+  width: 100%;
+  height: 1px;
+  background-color: var(--s3d2-color-surface-gray-900-transparent-10);
+}
+
+.reservation-step__sidebar-tips--title {
+  display: flex;
+  gap: var(--space-4);
+  svg {
+    flex-shrink: 0;
+
+  }
+}
+.reservation-step__wrap .reservation-step__form-wrap{
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  @media screen and (min-width: 1024px) {
+    gap: var(--space-5);
+  }
+
+  .reservation-subtitle{
+    color: var(--s3d2-color-gray-900)
+  }
+  .reservation-text{
+    margin-bottom: 0;
+    color: var(--s3d2-color-gray-900)
+  }
+  .btn-primary {
+    margin-top: 0;
+  }
+}
+.reservation-label{
+  display: flex;
+  gap: var(--space-2);
+  align-items: flex-start;
+}
+
+.preloader-docusign {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--s3d2-color-gray-200); 
+  opacity: 0.9;/* Напівпрозорий фон */
+  backdrop-filter: blur(17px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: var(--space-2);
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  border-radius:var(--space-3) ;
+  pointer-events: none;
+
+  p{
+    max-width: 30%;
+    text-align: center;
+  }
+}
+
+/* Активний стан */
+.preloader-docusign.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Сама анімація кільця */
+.loader-docusign {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--s3d2-color-surface-gray-900-transparent-10);
+  border-top: 4px solid var(--s3d2-color-gray-900); /* Колір акценту */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  opacity: 1;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.reservation-important-span{
+  @include s3d2_fonts.fonts-3d-h3-semibold;
+}
