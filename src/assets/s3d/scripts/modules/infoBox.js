@@ -86,22 +86,22 @@ class InfoBox {
     });
 
     //по кліку на зображення відкрити сторінку квартири
-    $(document).on('click', '.js-s3d-card', event => {
-      if (
-        event.target.closest('.js-s3d-add__favourite') ||
-        event.target.closest('[data-show-flat-in-flyby]')
-      ) {
-        return;
-      }
+    // $(document).on('click', '.js-s3d-card', event => {
+    //   if (
+    //     event.target.closest('.js-s3d-add__favourite') ||
+    //     event.target.closest('[data-show-flat-in-flyby]')
+    //   ) {
+    //     return;
+    //   }
 
-      if (!event.target.closest('.s3d-card__image')) {
-        return;
-      }
+    //   if (!event.target.closest('.s3d-card__image')) {
+    //     return;
+    //   }
 
-      const id = $(event.currentTarget).data('id');
-      this.updateState('static');
-      this.updateFsm({ type: 'flat', id });
-    });
+    //   const id = $(event.currentTarget).data('id');
+    //   this.updateState('static');
+    //   this.updateFsm({ type: 'flat', id });
+    // });
   }
 
   removeSvgFlatActive() {

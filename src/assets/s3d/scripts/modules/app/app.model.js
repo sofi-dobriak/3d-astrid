@@ -653,7 +653,10 @@ class AppModel extends EventEmitter {
   setDefaultConfigFlyby(config) {
     if (config['intro']) {
       this.defaultFlybySettings = {
-        type: 'intro',
+        // type: 'intro',
+        type: 'flyby',
+        side: 'outside',
+        flyby: '1',
       };
     } else if (config['genplan']) {
       this.defaultFlybySettings = {

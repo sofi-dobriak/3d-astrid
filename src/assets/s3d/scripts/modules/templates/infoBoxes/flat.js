@@ -190,9 +190,9 @@ function Flat(i18n, data) {
             ${i18n.t('Flat.information.rooms')}: ${data.rooms}
           </div>
         </div>
-        <!-- <div class="s3d-card__buttons">
+        <div class="s3d-card__buttons">
             ${ButtonWithoutIcon('js-s3d-card__link', '', i18n.t('Flat.goToFlat'), 'secondary')}
-        </div> -->
+        </div>
         ${$vrButton}
       </div>
 
