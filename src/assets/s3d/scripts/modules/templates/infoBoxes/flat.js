@@ -190,10 +190,13 @@ function Flat(i18n, data) {
             ${i18n.t('Flat.information.rooms')}: ${data.rooms}
           </div>
         </div>
-        <div class="s3d-card__buttons">
+        <!--<div class="s3d-card__buttons">
             ${ButtonWithoutIcon('js-s3d-card__link', '', i18n.t('Flat.goToFlat'), 'secondary')}
-        </div>
+        </div>-->
         ${$vrButton}
+      </div>
+      <div class="s3d-card__buttons">
+          ${isDesktop() && isNotDesktopTouchMode() ? '' : ButtonWithoutIcon('js-s3d-nav__btn', `style="width: 100%;margin-top: var(--space-2);" data-s3d-event="closed" data-type="flat" data-id="${id}"`, i18n.t('Flat.goToFlat'), 'secondary')}
       </div>
 
 

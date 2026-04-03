@@ -438,29 +438,7 @@
     "menu_selector": "data-open-menu"
   },
   "menu_top_img": "/wp-content/themes/3d/assets/s3d/images/astrid-logo.svg",
-  "menu_tours_list": [
-    {
-      "title": {
-        "en": "Pool",
-        "uk": "Басейн"
-      },
-      "url": "https://apartment-tours.smartorange.com.ua/wp-json/wp/v2/get-tour-v2?id=7447"
-    },
-    {
-      "title": {
-        "en": "Reception",
-        "uk": "Реєстрація"
-      },
-      "url": "https://apartment-tours.smartorange.com.ua/wp-json/wp/v2/get-tour-v2?id=7461"
-    },
-    {
-      "title": {
-        "en": "Beach Walkway",
-        "uk": "Пляжна доріжка"
-      },
-      "url": "https://apartment-tours.smartorange.com.ua/wp-json/wp/v2/get-tour-v2?id=7812"
-    }
-  ],
+  "menu_tours_list": [],
   "currency_label": "$",
   "currency_value": "USD",
   "currency_list": [
@@ -546,9 +524,9 @@
       "plannings": "/wp-content/themes/3d/static/plannings.mp3"
     }
   },
-  "menu_tour_link": "https://apartment-tours.smartorange.com.ua/en/english-mension-fisher-island-lot7/?scene=0",
-  "menu_video_link": "/wp-content/themes/3d/assets/images-wp/EdenHero.mp4",
-  "menu_brochure_link": "/wp-content/themes/3d/assets/images-wp/Eden_compressed.pdf",
+  "menu_tour_link": "",
+  "menu_video_link": "",
+  "menu_brochure_link": "",
   "flat_description_2": {
     "title": "Share Property",
     "items": {
