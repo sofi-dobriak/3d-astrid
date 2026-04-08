@@ -424,12 +424,10 @@
   "flyby_finish_dates": {},
   "assotiated_flat_builds_with_flybys": {
     "2-outside": [
-      "1",
-      "2"
+      "1"
     ],
     "3-outside": [
-      "3",
-      "4"
+      "1"
     ]
   },
   "project_google_map_location": "https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d4267.159787134194!2d30.22098344084978!3d50.5105728196678!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTDCsDMwJzM3LjYiTiAzMMKwMTMnMTcuMCJF!5e0!3m2!1suk!2sua!4v1773072408898!5m2!1suk!2sua",

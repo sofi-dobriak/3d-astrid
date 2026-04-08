@@ -21,6 +21,7 @@ function general(i18n, data) {
     buttonType,
     show_prices,
   } = data;
+  console.log('general infobox data: ', data);
   if (!type) {
     return '';
   }
@@ -73,7 +74,7 @@ function general(i18n, data) {
   <div class="s3d-infoBox__block">
     <div class="s3d-infoBox__title">
       ${i18n.t('infoBox.from_price', {
-        text: `19 000  ${i18n.t('Flat.information.per')} ${i18n.t('area_unit')}`,
+        text: `  ${i18n.t('Flat.information.per')} ${i18n.t('area_unit')}`,
         currency: i18n.t('currencies.' + currency),
       })}
     </div>
@@ -94,7 +95,7 @@ function general(i18n, data) {
       : `
   <div class="s3d-infoBox__block">
     <div class="s3d-infoBox__title">${i18n.t('infoBox.from_price', {
-      text: '1 000 000',
+      text: '',
       currency: i18n.t('currencies.' + currency),
     })}</div>
   </div>
