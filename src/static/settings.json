@@ -287,6 +287,13 @@
         "translationNS": "Filter.type_labels.",
         "needTranslation": true,
         "paramaterByWhatWillBeFilter": "type_object"
+      },
+      {
+        "title": "Filter.list.compass",
+        "type": "checkbox",
+        "needTranslation": true,
+        "translationNS": "Filter.compass_directions.",
+        "paramaterByWhatWillBeFilter": "description"
       }
     ]
   },

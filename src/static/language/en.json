@@ -210,7 +210,8 @@
       "status": "Status",
       "floor": "Floor",
       "favourite--add": "Select",
-      "parking_spots": "Parking spots"
+      "parking_spots": "Parking spots",
+      "compass": "Direction"
     },
     "range": {
       "floor": "Floor",
@@ -247,7 +248,23 @@
     "not-marked-message": "This premise is not marked",
     "openFilter": "Open filter",
     "enterUnitNumber": "Enter unit number",
-    "Search by number": "Search by number"
+    "Search by number": "Search by number",
+    "compass_directions": {
+      "Північ": "North",
+      "Південь": "South",
+      "Захід": "West",
+      "Схід": "East",
+      "Північ, захід": "North, West",
+      "Північ, схід": "North, East",
+      "Північ, південь": "North, South",
+      "Північ, схід, південь": "North, East, South",
+      "Південь, північ": "South, North",
+      "Південь, захід": "South, West",
+      "Південь, захід, північ": "South, West, North",
+      "Захід, північ": "West, North",
+      "Схід, південь, захід": "East, South, West",
+      "Схід, пд-сх в 1вікно": "East, SE in 1 window"
+    }
   },
   "Flat": {
     "calculator": "Calculator",

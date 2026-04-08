@@ -45,7 +45,14 @@ function Filter(i18n, filterData = []) {
               return true;
             })
             .map(flat => flat[singleFilter.paramaterByWhatWillBeFilter])
-            .filter(value => value !== undefined && value !== null),
+            .filter(
+              value =>
+                value !== undefined &&
+                value !== null &&
+                value !== 0 &&
+                value !== '0' &&
+                value !== '',
+            ),
         ),
       ].sort((a, b) => a - b);
       const containerForThisFilter = document.querySelector(
