@@ -53,9 +53,12 @@ polygon[data-type='floor'] {
 }
 
 polygon[data-type='floor'] {
-  fill: var(--color-surface-success-available-transparent-20);
-
+  // fill: var(--color-surface-success-available-transparent-20);
+  // stroke: var(--border-gray-200);
   stroke: var(--border-gray-200);
+  cursor: pointer;
+  fill: var(--color-surface-semantic-success);
+  fill-opacity: 0.45;
 }
 
 .hybrid,

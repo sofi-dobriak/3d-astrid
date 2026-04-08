@@ -693,7 +693,7 @@
     .s3d-fv__list {
       display: flex;
       align-items: flex-start;
-      grid-gap: 0;
+      grid-gap: var(--space-4);
       overflow-x: auto;
       flex-grow: 1;
       @include mixins.scrollbars(8px, var(--color-surface-gray-600), transparent);

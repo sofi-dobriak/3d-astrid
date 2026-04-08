@@ -50,7 +50,9 @@ export default function CompareItem({ i18n, id, flat, propertiesToShow = [] }) {
             return `
             <div class="CompareItem__table-row">
               <div class="CompareItem__table-cell">
-                <span class="CompareItem__table-title text-style-3-d-fonts-1920-body-regular">${title}:</span>
+                <span class="CompareItem__table-title text-style-3-d-fonts-1920-body-regular">${
+                  keyPath === 'number' ? i18n.t('Flat.name') : title
+                }:</span>
                 <span class="CompareItem__table-value text-style-3-d-fonts-1920-body-regular">${
                   keyPath === 'sale' ? $status(i18n, flat) : valueFormat(value)
                 } </span>

@@ -16,7 +16,9 @@ function Floor(i18n, data) {
 
   const floorImageUrlNotFormated = get(async_data, 'url', false);
   const defaultModulePath = '/wp-content/themes/3d/assets';
-  const floorImageUrl = `${defaultModulePath}${floorImageUrlNotFormated}`;
+  const floorImageUrl = floorImageUrlNotFormated
+    ? `${defaultModulePath}${floorImageUrlNotFormated}`
+    : `/wp-content/themes/3d/assets/s3d/images/examples/no-image.png`;
 
   window.addEventListener(
     'floor-cached',
@@ -57,7 +59,7 @@ function Floor(i18n, data) {
   `
       : '';
   const $price_m2 =
-    show_prices && properties.price_m2
+    show_prices && properties.price_m2 && properties.price_m2.value_raw > 0
       ? `
     <div class="s3d-infoBox__flat__block" style="margin-top: 8px; margin-bottom:4px;">
       <div class="s3d-infoBox__flat__alert-title" style="margin-bottom: 0px">

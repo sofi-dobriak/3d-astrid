@@ -32,12 +32,12 @@ function Favourites(i18n, count) {
           'data-disable-when-compare-empty data-compare-show-differences',
         )}
 
-        ${ButtonIconLeft(
+        <!--${ButtonIconLeft(
           's3d2-IconButton--dark',
           'data-disable-when-compare-empty data-compare-pdf',
           'Download PDF',
           'PDF',
-        )}
+        )}-->
 
 
       </div>

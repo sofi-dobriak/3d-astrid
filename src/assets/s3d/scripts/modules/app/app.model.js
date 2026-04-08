@@ -1328,9 +1328,17 @@ class AppModel extends EventEmitter {
           return flat[property['key']];
         });
 
+        // Фільтруємо нулі та невалідні числа перед пошуком мінімуму
+        const filteredValues = values.filter(val => val !== 0 && val !== null && val !== undefined);
+
+        // Якщо всі значення були 0 або масив порожній, Math.min поверне Infinity.
+        // Можна додати перевірку на цей випадок.
+        const minValue = filteredValues.length > 0 ? Math.min(...filteredValues) : 0;
+
         const finalPropertyValue = [
           this.i18n.t(get(property, 'prefix', '')),
-          Math.min(...values),
+          // Math.min(...values),
+          minValue,
           this.i18n.t(get(property, 'postfix', '')),
         ].join(' ');
 
@@ -1338,7 +1346,8 @@ class AppModel extends EventEmitter {
           ...acc,
           [property['key']]: {
             value: finalPropertyValue,
-            value_raw: Math.min(...values),
+            // value_raw: Math.min(...values),
+            value_raw: minValue,
             type: property.type,
             size: property.size,
           },

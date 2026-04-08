@@ -66,7 +66,8 @@ export default function s3dDashboard(
                 ${s3d2_ButtonIconLeft(
                   's3d-flat-dashboard__gallery-button',
                   `${FLAT_GALLERY_FANCYBOX}="${gallery.length >= 5 ? 5 : 0}"`,
-                  `See all ${gallery.length} photos`,
+                  // `See all ${gallery.length} photos`,
+                  i18n.t('Flat.see_all_photos', { count: gallery.length }),
                   'gallery',
                 )}
             </div>

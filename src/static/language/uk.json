@@ -268,7 +268,7 @@
   },
   "Flat": {
     "calculator": "Калькулятор",
-    "name": "Апартаменти",
+    "name": "Квартира",
     "explication": "Експлікація",
     "gallery": "Галерея",
     "virtual_tour": "ТУР ПО КІМНАТАХ",
@@ -286,6 +286,7 @@
     "pools": "басейни",
     "from_window_view": "Вигляд 360",
     "scroll": "Скрол",
+    "see_all_photos": "Переглянути всі {{count}} фотографій",
     "documentation": {
       "download": "Завантажити"
     },

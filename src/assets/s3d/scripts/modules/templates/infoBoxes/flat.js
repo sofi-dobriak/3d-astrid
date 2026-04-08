@@ -108,7 +108,8 @@ function Flat(i18n, data) {
   const $priceM2 = () => {
     if (!showPrices) return '';
     if (currency.trim() == '$') {
-      return `
+      return price_m2
+        ? `
         <div class="s3d-card__price">
           <div class="s3d-card__price"">
             ${i18n.t('Flat.information.priceText')}
@@ -117,9 +118,11 @@ function Flat(i18n, data) {
             ${i18n.t('Flat.information.area_unit')}
           </div>
         </div>
-      `;
+      `
+        : ``;
     }
-    return `
+    return price_m2
+      ? `
       <div class="s3d-card__row">
         <div class="s3d-card__price"">
           ${price_m2}
@@ -128,7 +131,8 @@ function Flat(i18n, data) {
           ${i18n.t('Flat.information.area_unit')}
         </div>
       </div>
-    `;
+    `
+      : ``;
   };
 
   return `
@@ -196,7 +200,16 @@ function Flat(i18n, data) {
         ${$vrButton}
       </div>
       <div class="s3d-card__buttons">
-          ${isDesktop() && isNotDesktopTouchMode() ? '' : ButtonWithoutIcon('js-s3d-nav__btn', `style="width: 100%;margin-top: var(--space-2);" data-s3d-event="closed" data-type="flat" data-id="${id}"`, i18n.t('Flat.goToFlat'), 'secondary')}
+          ${
+            isDesktop() && isNotDesktopTouchMode()
+              ? ''
+              : ButtonWithoutIcon(
+                  'js-s3d-nav__btn',
+                  `style="width: 100%;margin-top: var(--space-2);" data-s3d-event="closed" data-type="flat" data-id="${id}"`,
+                  i18n.t('Flat.goToFlat'),
+                  'secondary',
+                )
+          }
       </div>
 
 

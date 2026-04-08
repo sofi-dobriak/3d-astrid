@@ -92,7 +92,7 @@
     width: 100%;
     padding: var(--space-2) var(--space-3);
     border-radius: var(--space-1);
-    background-color: var(--s3d2-color-surface-gray-200-transparent-80);
+    background-color: var(--s3d2-color-surface-gray-200);
     color: var(--s3d2-color-text-gray-900);
     transition: 0.25s ease-out;
     border: 1px solid transparent;
@@ -103,8 +103,10 @@
 
     &.active {
       pointer-events: none;
-      background-color: var(--s3d2-color-surface-gray-200-transparent-80);
-      opacity: 0.5;
+      background-color: #21446b;
+      color: var(--s3d2-color-text-gray-200);
+      // background-color: var(--s3d2-color-surface-gray-200-transparent-80);
+      // opacity: 0.5;
     }
 
     &.active-because-prev-history-is-flyby {

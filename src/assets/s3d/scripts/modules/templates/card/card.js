@@ -110,7 +110,8 @@ function Card(
   const $priceM2 = () => {
     if (!showPrices) return '';
     if (currency.trim() == '$') {
-      return `
+      return price_m2
+        ? `
         <div class="s3d-card__price">
           <div class="s3d-card__price">
             ${i18n.t('Flat.information.priceText')}
@@ -119,9 +120,11 @@ function Card(
             ${i18n.t('Flat.information.area_unit')}
           </div>
         </div>
-      `;
+      `
+        : ``;
     }
-    return `
+    return price_m2
+      ? `
       <div class="s3d-card__row">
         <div class="s3d-card__price">
           ${price_m2}
@@ -130,7 +133,8 @@ function Card(
           ${i18n.t('Flat.information.area_unit')}
         </div>
       </div>
-    `;
+    `
+      : ``;
   };
 
   const isFavourite = favouritesIds$.value.includes(id);

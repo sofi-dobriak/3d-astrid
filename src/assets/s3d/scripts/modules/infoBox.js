@@ -84,24 +84,6 @@ class InfoBox {
       const entries = Object.entries(delegateElements);
       entries.map(([key, value]) => isObject(value) && this.mappingClickEvents[key](value));
     });
-
-    //по кліку на зображення відкрити сторінку квартири
-    // $(document).on('click', '.js-s3d-card', event => {
-    //   if (
-    //     event.target.closest('.js-s3d-add__favourite') ||
-    //     event.target.closest('[data-show-flat-in-flyby]')
-    //   ) {
-    //     return;
-    //   }
-
-    //   if (!event.target.closest('.s3d-card__image')) {
-    //     return;
-    //   }
-
-    //   const id = $(event.currentTarget).data('id');
-    //   this.updateState('static');
-    //   this.updateFsm({ type: 'flat', id });
-    // });
   }
 
   removeSvgFlatActive() {
