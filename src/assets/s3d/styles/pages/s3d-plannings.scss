@@ -507,8 +507,7 @@
     // border-right: 1px solid var(--s3d2-color-border-gray-900-transparent-10);
     .s3d-filter-wrap {
       background-image: none;
-      background-image: none;
-      background-color: transparent;
+      // background-color: transparent;
     }
     &:empty {
       display: none;
@@ -618,9 +617,10 @@
     .s3d-filter-wrap {
       position: fixed;
       left: 0;
-      // top: var(--s3d-header);
-      top: auto;
-      height: max-content;
+      top: var(--s3d-header);
+      // top: auto;
+      // height: max-content;
+      height: 100%;
       bottom: var(--mobile-controller-height);
       transform: translateX(-100%);
 
@@ -700,6 +700,12 @@
       @include mixins.scrollbar-h;
       overscroll-behavior: none;
 
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
       & > * {
         flex-shrink: 0;
         min-width: 320px;
@@ -761,9 +767,15 @@
     .s3d-fv__container {
       .s3d-fv__list {
         display: flex;
-        grid-gap: 0;
+        // grid-gap: 0;
         overflow-x: auto;
         @include mixins.scrollbars(10px, var(--color-surface-gray-600), transparent);
+
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar {
+          display: none;
+        }
 
         & > * {
           flex-shrink: 0;

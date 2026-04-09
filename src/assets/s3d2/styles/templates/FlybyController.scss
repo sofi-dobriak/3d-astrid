@@ -16,9 +16,21 @@
     top: calc(var(--s3d-header) + var(--space-1));
   }
   .s3d__compass {
+    // position: absolute;
+    // right: var(--space-4);
+    // top: calc(var(--s3d-header) + var(--space-1));
     position: absolute;
-    right: var(--space-4);
-    top: calc(var(--s3d-header) + var(--space-1));
+    right: var(--space-2);
+    top: calc(var(--s3d-header) + var(--space-12));
+    margin: 0;
+    background-color: var(--s3d2-color-surface-gray-200-transparent-80);
+    border-radius: var(--border-space-2);
+    backdrop-filter: blur(20px);
+
+    @media screen and (min-width: 1023px) {
+      background-color: transparent;
+      backdrop-filter: none;
+    }
   }
 }
 .FlybyController {

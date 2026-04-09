@@ -120,7 +120,7 @@ export default class SexyInput {
         /* eslint-enable */
         numericOnly: true,
         prefix: '+' + initialDialCode,
-        blocks: [initialDialCode.length + 1, 3, 3, 2, 2],
+        blocks: [initialDialCode.length + 1, 2, 3, 2, 2],
         delimiters: [' ', ' ', ' ', ''],
       });
       input.addEventListener('countrychange', () => {

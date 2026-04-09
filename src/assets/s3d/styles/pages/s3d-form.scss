@@ -213,6 +213,7 @@
       .form-field {
         width: 100%;
         position: relative;
+        margin-top: var(--space-2);
 
         &-input__title {
           color: var(--s3d2-color-text-gray-900);
@@ -383,6 +384,8 @@
         overflow-y: auto;
         gap: var(--space-4);
         justify-content: flex-start;
+        height: auto;
+        min-height: 290px;
       }
       &--popup__title {
         // margin-bottom: var(--space-3);

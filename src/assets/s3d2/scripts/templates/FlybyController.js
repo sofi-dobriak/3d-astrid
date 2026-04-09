@@ -101,7 +101,7 @@ export default function FlybyController(i18n) {
       'intro',
       'favourites',
     ])}>
-    <!--  ${$compass(i18n)} -->
+    ${$compass(i18n)}
     ${s3d2_FilterButton(i18n.t('ctr.menu.btn.filter'))}
       <button type="button" hidden class="ButtonIconLeft ButtonIconLeft--filter js-ctr-btn js-s3d-ctr__filter FlybyControllerWrapper-filter-call-button">
         <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -18,6 +18,9 @@ export default function s3d2_MobileFlybyController(i18n, config) {
     } else {
       title = i18n.t('ctr.nav.' + 'flyby' + '_' + evt.detail.flyby + '_' + evt.detail.side);
     }
+    if (!type) {
+      title = i18n.t('ctr.nav.flyby_1_outside');
+    }
     buttons.forEach(button => {
       button.querySelector('span').textContent = title;
     });

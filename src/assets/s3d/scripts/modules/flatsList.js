@@ -349,7 +349,7 @@ class FlatsList {
     this.currentShowAmount += amount;
     document.querySelector('.js-s3d-filter__body').dataset.viewType = this.filter.viewType;
     if (this.filter.viewType === 'card') {
-      document.querySelector('.js-s3d-filter__body').insertAdjacentHTML('afterbegin', arr.join(''));
+      document.querySelector('.js-s3d-filter__body').insertAdjacentHTML('beforeend', arr.join(''));
     } else {
       document.querySelector('.js-s3d-filter__body').append(...arr);
     }
