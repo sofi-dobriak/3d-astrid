@@ -178,6 +178,10 @@
           text-align: left;
           max-width: 220px;
           margin-bottom: var(--space-2);
+
+          @media screen and (max-width: 1023px) {
+            max-width: none;
+          }
         }
 
         &__subtitle {
@@ -188,9 +192,10 @@
         }
 
         &__img {
+          margin-bottom: 40px;
+
           img {
             width: 250px;
-            margin-bottom: 20px;
           }
         }
 

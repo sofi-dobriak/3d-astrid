@@ -20,9 +20,9 @@
     background-color: var(--s3d2-color-surface-gray-200);
     backdrop-filter: blur(20px);
 
-    @media screen and (max-width: 768px) {
-      padding: var(--space-4) 0;
-    }
+    // @media screen and (max-width: 768px) {
+    //   padding: var(--space-4) 0;
+    // }
 
     & + .s3d2-menu-wrap__overlay {
       position: fixed;

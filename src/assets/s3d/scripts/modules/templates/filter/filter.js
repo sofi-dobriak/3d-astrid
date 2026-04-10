@@ -210,7 +210,7 @@ function Filter(i18n, filterData = []) {
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M8.89319 1.63579L9.43974 2.2174L12.4395 5.40965L12.9531 5.9562L11.86 6.9834L11.3464 6.43685L9.64319 4.62433L9.64319 13.5L9.64319 14.25L8.14319 14.25L8.14319 13.5L8.14319 4.62433L6.43995 6.43685L5.92635 6.9834L4.83325 5.9562L5.34685 5.40965L8.34665 2.2174L8.89319 1.63579Z" fill="#6C7A88"/>
               </svg>
             </div>
-            <div class="s3d-filter__th" data-sort="price" style="display: ${
+            <div class="s3d-filter__th" data-sort="_price" style="display: ${
               CONFIG.show_prices ? '' : 'none'
             }">
               ${i18n.t('Filter.list.price')} ${i18n.t('currency_label')}

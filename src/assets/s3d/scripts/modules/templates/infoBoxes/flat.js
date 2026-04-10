@@ -21,6 +21,7 @@ function Flat(i18n, data) {
     price_m2,
     build,
     type,
+    type_object,
     number,
     project_deadline,
     baths,
@@ -125,7 +126,7 @@ function Flat(i18n, data) {
       ? `
       <div class="s3d-card__row">
         <div class="s3d-card__price"">
-          ${price_m2}
+          ${numberWithCommas(price_m2)}
           ${i18n.t('Flat.information.priceText')}
           ${i18n.t('Flat.information.per')}
           ${i18n.t('Flat.information.area_unit')}
@@ -164,7 +165,10 @@ function Flat(i18n, data) {
        ${$number(i18n, data)}
       </div>-->
       <div class="s3d-card__middle">
-        <div class="s3d-card__flat-title">${i18n.t('ctr.nav.flat')} ${number}</div>
+        <!--<div class="s3d-card__flat-title">${i18n.t('ctr.nav.flat')} ${number}</div>-->
+        <div class="s3d-card__flat-title">
+          ${i18n.t(`Filter.type_labels.${String(type_object)}`)} ${number}
+        </div>
 
         <div class="s3d-card__flat-area">${area} ${i18n.t('Flat.information.area_unit')}</div>
         ${isDesktop() ? '' : $closeBtn()}

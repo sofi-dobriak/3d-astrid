@@ -21,7 +21,6 @@ function general(i18n, data) {
     buttonType,
     show_prices,
   } = data;
-  console.log('general infobox data: ', data);
   if (!type) {
     return '';
   }
@@ -54,9 +53,21 @@ function general(i18n, data) {
   `
     : '';
 
-  const priceText = `${numberWithCommas(minPriceM2)} ${i18n.t('Flat.information.per')} ${i18n.t(
-    'area_unit',
-  )}`;
+  const formatPriceWithCurrency = (price, curr) => {
+    const formattedPrice = numberWithCommas(price);
+    const currencySign = i18n.t('currencies.' + curr);
+
+    // Якщо долар — знак зліва, якщо інше (грн) — справа
+    return curr === '$' || curr === 'USD'
+      ? `${currencySign}${formattedPrice}`
+      : `${formattedPrice} ${currencySign}`;
+  };
+
+  // const priceText = `${numberWithCommas(minPriceM2)} ${i18n.t('Flat.information.per')}
+  //   ${i18n.t('area_unit')}`;
+
+  const priceWithSignM2 = formatPriceWithCurrency(minPriceM2, currency);
+  const priceText = `${priceWithSignM2} ${i18n.t('Flat.information.per')} ${i18n.t('area_unit')}`;
 
   const $minPriceM2 =
     show_prices && minPriceM2
@@ -64,8 +75,10 @@ function general(i18n, data) {
   <div class="s3d-infoBox__block">
     <div class="s3d-infoBox__title">
       ${i18n.t('infoBox.from_price', {
+        // text: priceText,
+        // currency: i18n.t('currencies.' + currency),
         text: priceText,
-        currency: i18n.t('currencies.' + currency),
+        currency: '', // Залишаємо порожнім, бо валюта вже всередині priceText
       })}
     </div>
   </div>
@@ -87,8 +100,10 @@ function general(i18n, data) {
   <div class="s3d-infoBox__block">
 
     <div class="s3d-infoBox__title">${i18n.t('infoBox.from_price', {
-      text: numberWithCommas(minPrice),
-      currency: i18n.t('currencies.' + currency),
+      // text: numberWithCommas(minPrice),
+      // currency: i18n.t('currencies.' + currency),
+      text: formatPriceWithCurrency(minPrice, currency),
+      currency: '',
     })}</div>
   </div>
   `

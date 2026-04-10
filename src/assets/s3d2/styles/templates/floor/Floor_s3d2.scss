@@ -21,11 +21,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  overflow: hidden; // <-- додай це
+  position: relative; // якщо ще немає
 
   &__svg-container {
     width: 100%;
     height: 90%;
-    overflow-x: auto;
+    overflow-x: hidden;
     overflow-y: hidden;
     overscroll-behavior: none;
     display: flex;
@@ -83,7 +85,6 @@
     }
     &-toggle {
       position: absolute;
-
       left: 1px;
       top: var(--space-10);
       transform: translateX(-70%) rotate(-90deg);
@@ -96,6 +97,7 @@
       backdrop-filter: blur(20px);
       overflow: hidden;
       z-index: 2;
+
       &-button {
         width: 16px;
         height: 16px;

@@ -69,6 +69,7 @@
   }
   &__link {
     margin: 27px var(--space-5) var(--space-8);
+    margin-top: auto;
   }
   &__img {
     position: relative;
@@ -119,11 +120,14 @@
     border: 1px solid var(--s3d2-color-border-gray-400);
     border-radius: var(--border-space-2);
     &__link {
-      margin: var(--space-5) var(--space-5) var(--space-8) var(--space-5);
+      margin: var(--space-5) var(--space-5) var(--space-5) var(--space-5);
+      margin-top: auto;
     }
     &__table {
       // height: 109px;
-      height: 19vh;
+      // height: 19vh;
+      height: auto;
+      margin-bottom: var(--space-5);
     }
   }
 }

@@ -7,7 +7,10 @@ import device from 'current-device';
  */
 export function numberWithCommas(x) {
   if (!x) return '';
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  return x
+    .toString()
+    .replace(/\s/g, '')
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
 
 /**

@@ -197,7 +197,8 @@ class FlatView extends EventEmitter {
 
     model.on('updateExplicationFloorTitle', data => {
       this._model.wrapper.querySelectorAll('[data-flat-explication-title]').forEach(el => {
-        el.textContent = this.i18n.t(`Flat.explication_data.floor_${data.floor}`);
+        // el.textContent = this.i18n.t(`Flat.explication_data.${String(data.floor)}`);
+        el.textContent = '';
       });
 
       this._model.wrapper.querySelectorAll('[data-flat-explication-button="floor"]').forEach(el => {

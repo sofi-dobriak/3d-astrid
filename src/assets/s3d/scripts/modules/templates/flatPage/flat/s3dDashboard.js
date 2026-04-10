@@ -74,7 +74,8 @@ export default function s3dDashboard(
             <div class="s3d-flat-dashboard__info">
                 <div class="s3d-flat-dashboard__info-item s3d-flat-dashboard__info-item--mobile-column s3d-flat-dashboard__info-item--mobile-head">
                     <span class="fonts-3d-h1">
-                        ${i18n.t('ctr.nav.flat')} ${flat.number}
+                        <!--${i18n.t('ctr.nav.flat')} ${flat.number}-->
+                        ${i18n.t(`Filter.type_labels.${String(flat.type_object)}`)} ${flat.number}
                     </span>
                     <span class="fonts-3d-body">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -132,14 +133,19 @@ export default function s3dDashboard(
                             ${i18n.t('Flat.information.rooms')}
                         </span>
                     </div>
-                    <div class="s3d-flat-dashboard__info-details-item s3d-flat-dashboard__info-item--mobile-row">
+                    ${
+                      flat.area
+                        ? `<div class="s3d-flat-dashboard__info-details-item s3d-flat-dashboard__info-item--mobile-row">
                         <span class="fonts-3d-h1">
                             ${numberWithCommas(flat.area)}
                         </span>
                         <span class="fonts-3d-body">
                             ${i18n.t('area_unit')}
                         </span>
-                    </div>
+                    </div>`
+                        : ``
+                    }
+
             </div>
 
             <div class="s3d-flat-dashboard__call-to-action">

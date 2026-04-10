@@ -91,6 +91,7 @@
     grid-area: content;
     display: flex;
     height: 100%;
+
     flex-direction: column;
     align-content: flex-start;
     overflow: hidden;
@@ -110,6 +111,12 @@
       margin-right: 0;
       @include mixins.scrollbar-v;
       transition: grid-template-columns 0.3s linear;
+      -webkit-overflow-scrolling: touch; // Обов'язково для плавності на старих iOS
+      overscroll-behavior-y: contain; // Запобігає "ланцюговому" скролу всієї сторінки
+      // Додайте це, щоб Safari виніс список на окремий шар відеокарти:
+      perspective: 1000px;
+      backface-visibility: hidden;
+      transform: translateZ(0);
 
       & > * {
         transition: transform 0.3s linear, opacity 0.3s linear, width 0.3s linear,
@@ -129,7 +136,7 @@
 
       @media screen and (max-width: 680px) {
         // grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        margin-top: 0;
+        margin-top: var(--space-5);
         &.list {
           margin-top: var(--space-2);
         }
@@ -249,6 +256,8 @@
     }
 
     .s3d-fv__list {
+      -webkit-overflow-scrolling: touch;
+
       margin-bottom: var(--offset);
 
       .s3d-card {
@@ -411,6 +420,8 @@
   .s3d-pl__filter-container {
     border-right: 1px solid var(--s3d2-color-border-gray-900-transparent-10);
     border-radius: var(--border-space-3);
+    overflow-y: auto;
+    overflow-x: hidden;
   }
   .s3d2-filter-call-button {
     transform: translate(-34%, -50%) rotate(-90deg);
@@ -464,6 +475,7 @@
     position: relative;
     // transition: width 0.3s linear;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100vw;
 
     &-pending {
       position: absolute;
@@ -538,6 +550,7 @@
   .s3d-pl {
     align-self: flex-start;
     padding-top: var(--s3d-header);
+    height: 100svh;
   }
 
   .s3d__wrapper__plannings__filter {
@@ -634,6 +647,7 @@
 
       &.s3d-open-filter {
         transform: translateX(0);
+        height: 100%;
       }
     }
   }
@@ -666,6 +680,7 @@
       // width: calc(100vw - var(--space-8));
       // left: var(--space-4);
       transition: 0.25s ease-in !important;
+      height: 100%;
 
       .s3d-filter__close-wrap {
         display: flex;
@@ -676,6 +691,7 @@
 
       &.s3d-open-filter {
         transform: translateX(0);
+        height: 100%;
       }
     }
   }
@@ -695,13 +711,16 @@
       align-items: flex-start;
       grid-gap: var(--space-4);
       overflow-x: auto;
+      overflow-y: auto;
       flex-grow: 1;
       @include mixins.scrollbars(8px, var(--color-surface-gray-600), transparent);
       @include mixins.scrollbar-h;
       overscroll-behavior: none;
+      -webkit-overflow-scrolling: touch;
 
       scrollbar-width: none;
       -ms-overflow-style: none;
+
       &::-webkit-scrollbar {
         display: none;
       }
@@ -711,6 +730,9 @@
         min-width: 320px;
         // width: 26%;
         width: 17vw;
+        height: 100%;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
       }
     }
   }
@@ -733,6 +755,7 @@
 
     & > :nth-child(n + 2) {
       margin-left: var(--space-2);
+      // margin: 0 var(--space-5);
     }
   }
 
@@ -768,11 +791,18 @@
       .s3d-fv__list {
         display: flex;
         // grid-gap: 0;
-        overflow-x: auto;
+        overflow: auto;
         @include mixins.scrollbars(10px, var(--color-surface-gray-600), transparent);
 
         scrollbar-width: none;
         -ms-overflow-style: none;
+
+        -webkit-overflow-scrolling: touch;
+
+        // 3. Відриваємо від основного потоку рендеру
+        transform: translateZ(0);
+        will-change: scroll-position;
+
         &::-webkit-scrollbar {
           display: none;
         }
@@ -780,6 +810,13 @@
         & > * {
           flex-shrink: 0;
           width: 40%;
+          // height: 90%;
+          // overflow: auto;
+          height: 70svh;
+
+          // 5. Апаратне прискорення для карток на планшеті
+          transform: translateZ(0);
+          backface-visibility: hidden;
         }
       }
     }
@@ -829,9 +866,9 @@
         margin-top: 0;
 
         // padding-bottom: var(--mobile-controller-height);
-        // &>* {
-        // width: 90%;
-        // }
+        & > * {
+          // width: 90%;
+        }
       }
     }
   }
@@ -920,4 +957,15 @@
       }
     }
   }
+}
+
+.mobile,
+.tablet {
+  .s3d-fv {
+    transition: none !important; // Для мобілок ці 0.3s тільки шкодять
+  }
+}
+
+.s3d-fv__list > * {
+  transform: translateZ(0); // Примусове апаратне прискорення для кожної картки
 }

@@ -24,6 +24,7 @@ function Card(
     price_m2,
     build,
     type,
+    type_object,
     price,
     sale,
     baths,
@@ -127,7 +128,7 @@ function Card(
       ? `
       <div class="s3d-card__row">
         <div class="s3d-card__price">
-          ${price_m2}
+          ${numberWithCommas(price_m2)}
           ${i18n.t('Flat.information.priceText')}
           ${i18n.t('Flat.information.per')}
           ${i18n.t('Flat.information.area_unit')}
@@ -165,9 +166,18 @@ function Card(
        ${$number(i18n, flat)}
       </div>-->
       <div class="s3d-card__middle">
-        <div class="s3d-card__flat-title">${i18n.t('ctr.nav.flat')} ${number}</div>
+        <!--<div class="s3d-card__flat-title">${i18n.t('ctr.nav.flat')} ${number}</div>-->
+        <div class="s3d-card__flat-title">
+          ${i18n.t(`Filter.type_labels.${String(type_object)}`)} ${number}
+        </div>
 
-        <div class="s3d-card__flat-area">${area} ${i18n.t('Flat.information.area_unit')}</div>
+        ${
+          area
+            ? `<div class="s3d-card__flat-area">${area} ${i18n.t(
+                'Flat.information.area_unit',
+              )}</div>`
+            : ``
+        }
         <!-- <div>${area} м²</div> -->
       </div>
       <div class="s3d-card__image">

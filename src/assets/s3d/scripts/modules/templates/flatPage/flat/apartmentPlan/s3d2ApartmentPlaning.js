@@ -45,6 +45,7 @@ export default function s3d2ApartmentPlanings(i18n, flat, floorList, socialMedia
   };
   const hasFlat2dAnd3dPlansOnLevel =
     flat.level !== 1 && Object.keys(get(flat, 'flat_levels_photo.1', {})).length > 1;
+
   return `
       <div class="s3d2-apartment__flat-explication-screen-wrap">
         <div class="s3d2-apartment__flat-explication-screen">
@@ -123,9 +124,9 @@ export default function s3d2ApartmentPlanings(i18n, flat, floorList, socialMedia
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="s3d2-apartment__flat-explication-screen-slide">
-                            <img src="${
-                              flat['img_big']
-                            }" data-flat-explication-image data-container-explication-floor="2"/>
+                           <img src="${
+                             flat['img_big']
+                           }" data-flat-explication-image data-container-explication-floor="2"/>
                             ${$s3d2GoToFloor(i18n, flat, floorList)}
                         </div>
                     </div>

@@ -49,7 +49,7 @@
             "ms": 40
           }
         ],
-        "frameWithNorthDirection": 100,
+        "frameWithNorthDirection": 1,
         "mouseSpeed": 0.5,
         "startDegCompass": 60
       }
@@ -207,8 +207,8 @@
           "uk": "Яка ціна квартири?"
         },
         "answer": {
-          "en": "The price of the flat is {{currency_label}} [[price]]",
-          "uk": "Ціна квартири - {{currency_label}} [[price]]"
+          "en": "The price of the flat is [[price]] {{currency_label}} ",
+          "uk": "Ціна квартири - [[price]] {{currency_label}} "
         }
       }
     ],
@@ -430,7 +430,7 @@
       "1"
     ]
   },
-  "project_google_map_location": "https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d4267.159787134194!2d30.22098344084978!3d50.5105728196678!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTDCsDMwJzM3LjYiTiAzMMKwMTMnMTcuMCJF!5e0!3m2!1suk!2sua!4v1773072408898!5m2!1suk!2sua",
+  "project_google_map_location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2728.882736898835!2d30.22293509999999!3d50.5106122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472b33deda6875bd%3A0xda48f635721b8766!2z0LLRg9C70LjRhtGPINCS0LDRgdC40LvRjyDQodGC0YPRgdCwLCA2NCwg0IbRgNC_0ZbQvdGMLCDQmtC40ZfQstGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCAwODIwMA!5e1!3m2!1suk!2sua!4v1775726171264!5m2!1suk!2sua",
   "infoBoxes": {
     "general_flyby_button_titles": {
       "faq": "Можливі підписи для кнопок у інфобоксі обльоту : queue ,villa, house",
@@ -459,7 +459,7 @@
   "show_prices": true,
   "slider_scale_container_logo": "/wp-content/themes/3d/assets/s3d/images/astrid-logo.svg",
   "languages": "uk/en",
-  "show_phoneNumber": "+380689012092",
+  "show_phoneNumber": "+38 068 901 2092",
   "hideDocumentation": true,
   "hideExterior": true,
   "hideFinancialTerms": false,
@@ -491,14 +491,14 @@
     "global_number": "+38 068 901 2092",
     "email": "atf@tomin.family",
     "construction_department": {
-      "google_maps_link": "https://maps.app.goo.gl/Mjhibqm5g3gsbbmt8",
+      "google_maps_link": "https://maps.app.goo.gl/r1vfX3h9LsLNzBnH9",
       "text": {
         "en": "Ukraine, Irpin, Stusa Street, 64",
         "uk": "Україна, Ірпінь, вулиця Стуса, 64"
       }
     },
     "sales_department": {
-      "google_maps_link": "https://maps.app.goo.gl/Mjhibqm5g3gsbbmt8",
+      "google_maps_link": "https://maps.app.goo.gl/r1vfX3h9LsLNzBnH9",
       "text": {
         "en": "Ukraine, Irpin, Stusa Street, 64",
         "uk": "Україна, Ірпінь, вулиця Стуса, 64"

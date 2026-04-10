@@ -114,8 +114,8 @@
     top: 0;
     z-index: 10;
     padding: calc(var(--s3d-header) + var(--space-5)) var(--space-5) 0 var(--space-5);
-    // background-color: var(--s3d2-color-gray-200);
-    backdrop-filter: blur(40px);
+    background-color: var(--s3d2-color-gray-200);
+    // backdrop-filter: blur(20px);
     width: 100%;
     margin-bottom: var(--space-5);
     @media screen and (max-width: 600px) {
