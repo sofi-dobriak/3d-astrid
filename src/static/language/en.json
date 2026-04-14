@@ -286,7 +286,7 @@
     "pools": "pools",
     "from_window_view": "360 views",
     "scroll": "Scroll",
-    "see_all_photos": "See all {{count}} photos",
+    "see_all_photos": "Переглянути всі {{count}} фотографії",
     "documentation": {
       "download": "Download"
     },

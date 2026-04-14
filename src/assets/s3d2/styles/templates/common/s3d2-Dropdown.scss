@@ -103,7 +103,7 @@
 
     &.active {
       pointer-events: none;
-      background-color: #21446b;
+      background-color: var(--s3d2-color-brand-800);
       color: var(--s3d2-color-text-gray-200);
       // background-color: var(--s3d2-color-surface-gray-200-transparent-80);
       // opacity: 0.5;

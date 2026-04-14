@@ -642,7 +642,8 @@
 
 .desktop {
   .s3d-filter-wrap.s3d-planning-filter-wrap {
-    height: auto;
+    // height: auto;
+    height: 100%;
     // height: calc(var(--vh, 1vh) * 100 - var(--s3d-header) - var(--space-4));
   }
 }

@@ -475,7 +475,9 @@
     position: relative;
     // transition: width 0.3s linear;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    width: 100vw;
+    @media screen and (max-width: 1023px) {
+      width: 100vw;
+    }
 
     &-pending {
       position: absolute;
