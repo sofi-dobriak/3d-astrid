@@ -445,12 +445,13 @@ class FlatModel extends EventEmitter {
       return;
     }
 
-    const getFlatType = getFlatById.type;
+    const currentFlatTypeObject = getFlatById.type_object;
 
     shuffleArray(flatsArray);
 
     const otherTypeFlats = flatsArray.reduce((acc, val) => {
-      if (val.id === flatId || val.sale != '1') return acc;
+      if (+val.id === +flatId || val.sale != '1') return acc;
+      if (val.type_object !== currentFlatTypeObject) return acc;
       acc.push(val);
 
       return acc;
